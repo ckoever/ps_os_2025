@@ -1,0 +1,55 @@
+ssh = secure remote shell (network protocol)
+pwd = current working directory
+ls = list files (in a directory)
+cd = switch directory (.. to go up)
+touch = create blank file
+mkdir = create blank directory
+cp = copy file or dir from a to b
+mv = move file or dir from a to b
+rm = removr file from a (use rm -R to delete dir)
+grep = get an input and use filter on it (often used with pipes |)
+> = get output of a and redirect to file/dev/etc. (a > "io")
+| = get output of a and give it as input parameter to b (a | b)
+vim = editor like nano, but complicated
+	use : to run command
+	:e [file] to open/create file
+	:w to save file
+	:q to quit
+	:...! to force
+	(commands can be combined)
+history = see many old commands that have been entered (limit exisits)
+cat = show content of a file
+man = help and documentation of a command, but also module
+help = get short summary and parameters of a command
+info = heavy documentation of some commands with menu (eg. screen)
+apropos = search for man pages containing the string (eg. apropos python)
+[cmd] --help = get command line options
+man intro = adds additional commands to this summary and explains them 
+	mount, unmount, kill, kill -9, calendar, ...
+man man-pages = conventions when writing man pages (syntax)
+man file-hierary = all directorys have their own determined use
+	/srv = server payload
+	/home = userfiles of all users (/root = root user)
+	/etc = configs
+	/tmp = temp files (/run for sockets and runtime data)
+	/usr = os system resources
+	/var = variable data contains cache, log, ...
+	/dev = all devices
+	...
+man printf vs man 3 printf:
+	1X User commands (Programs)
+	2  System calls
+	3X Library calls
+	4  Special files (devices)
+	5  File formats and config files
+	6  Games
+	7  Overvies, conventions, and miscellaneous
+	8 System management coimmands
+	(see more man man-pages)
+Finally:
+	cd ~
+	mkdir fold
+	touch fold/a
+	ls > fold/a
+	(mount zid filesystem in file manager using ssh://)
+	history
