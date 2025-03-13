@@ -1,0 +1,26 @@
+Answer the following questions:
+- Which command did you use to set the permissions for 'task2.txt'?
+chmod 0600 task2.txt
+
+- Which command did you use to set the permissions for 'file.txt'?
+chmod 0400 file.txt
+
+- Explain how to read these permission strings (e.g. `rw-rw-r--`).
+user has rw, group members have rw, others have r
+
+- How do these permission strings relate to octal permissions (e.g. `0644`)?
+every number has 3 Bits: Bit 3 (4) = r; Bit 2 (2) = w; Bit 1 (1) = x
+the first number sets stiky
+
+- What is the benefit of having 'groups' and 'others'?
+you can allow edit only to a group
+
+- In your opinion, what are the ideal permissions for ...
+  - ... a text file used to take private notes?
+  0600
+  - ... a shell script?
+  0100
+  - ... a config file that should not be edited?
+  0444
+
+Hand 'task2.txt' as your solution.

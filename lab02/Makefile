@@ -3,7 +3,7 @@
 # and that no additional files are archived.
 # You can use the zipinfo command to check the file structure of an existing archive.
 
-USERNAME = csXXXXXX
+USERNAME = csbc4015
 EXERCISE = 02
 
 # This excludes some common directories automatically.

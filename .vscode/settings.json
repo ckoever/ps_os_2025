@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "stdlib.h": "c",
+        "stdio.h": "c",
+        "time.h": "c",
+        "times.h": "c",
+        "timex.h": "c",
+        "user.h": "c",
+        "types.h": "c",
+        "locale_t.h": "c"
+    }
+}

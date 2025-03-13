@@ -1,0 +1,19 @@
+Experiment with different values for n and s. Analyze the obtained output. 
+
+Is the order of the messages consistent? 
+No
+
+Can the order of these messages be predicted?
+No
+
+What does it depend on?
+What the sceduler selects. One factor could be priority, but it is same.
+
+Notice that the function DR_p uses rand(3) to repeatedly generate pseudo-random numbers.
+By default, this function returns the same sequence of numbers every time. 
+To get different estimates from each process, seed the random number generator using srand(getpid()). 
+Does it matter whether you do this before or after the call to fork()?
+
+Yes, seeding after fork() ensures that each process uses 
+its unique process ID to initialize its random number 
+generator, producing different random sequences.

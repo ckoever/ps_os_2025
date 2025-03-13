@@ -1,0 +1,5 @@
+#include "key.h"
+
+const char* get_key() {
+    return "$USER"; // here you need to replace "your_username" with the username of your account. Look at whoami(1).
+}
