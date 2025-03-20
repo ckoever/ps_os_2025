@@ -7,6 +7,15 @@
         "timex.h": "c",
         "user.h": "c",
         "types.h": "c",
-        "locale_t.h": "c"
+        "locale_t.h": "c",
+        "signal.h": "c",
+        "errno.h": "c",
+        "socket.h": "c",
+        "personality.h": "c",
+        "wait.h": "c",
+        "*.tcc": "c",
+        "string": "c",
+        "istream": "c",
+        "streambuf": "c"
     }
 }

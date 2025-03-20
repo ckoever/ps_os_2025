@@ -1,0 +1,23 @@
+- What difference do you notice between `SIGINT` and `SIGKILL`?
+SIGINT: Interrupt signal, f.e. when pressing CTRL + c, can be handled
+SIGKILL: Kill Signal, last line of killing a process, cannot be handled (will be ignored)
+
+- What can the signals `SIGSTOP` and `SIGCONT` be used for?
+https://major.io/p/two-great-signals-sigstop-and-sigcont/
+https://eitca.org/cybersecurity/eitc-is-lsa-linux-system-administration/linux-processes/process-signals/examination-review-process-signals/discuss-the-significance-of-the-sigstop-and-sigcont-signals-in-managing-processes-in-linux/#:~:text=To%20summarize%2C%20the%20SIGSTOP%20and,of%20a%20previously%20stopped%20process.
+In short, SIGSTOP tells a process to “hold on” and SIGCONT tells a process to “pick up where you left off”.
+These signals are extensively used in job control, process scheduling, and process synchronization scenarios, 
+enabling administrators to effectively manage and control the flow of processes in the Linux operating system.
+
+- What happens when you press `CTRL + c` while the program is running (as a foreground process)?
+SIGINT is beeing handled, default kill
+
+- What happens when you press `CTRL + z` while the program is running (as a foreground process)?
+SIGSTOP is being handled, default pause
+
+- Hypothetically, what would happen in your program if another signal arrives while your signal handler is still executing? 
+Does it make a difference if it is the same signal or a different one?
+If the same signal arrives: nothing happens/will be executed after finish on most systems.
+If another signal arrives: may wait till finish or interrupting the old running handler, for handling itself. The old handler can finish when the new one has.
+(can lead to nested execution)
+h1 -> h2 -> h1 ..etc.
